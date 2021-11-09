@@ -1,0 +1,91 @@
+.work-hero-image {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.textbox {
+    .textbox-title {
+        font-family: stevie-sans, sans-serif;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    h3 {
+        margin-bottom: 0;
+    }
+}
+.videobox {
+    width: 100%;
+    height: auto;
+    &.video-bordered {
+        border: 1px solid #ccc;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 1rem;
+    }
+}
+
+.quote-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .quote {
+        display: none;
+        opacity: 0;
+        transition: opacity .3s ease;
+        &.active {
+            display: initial;
+            opacity: 1;
+        }
+        .qoute-by {
+            font-family: stevie-sans,sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.counter {
+    .counter-number {
+        font-size: 4rem;
+        font-weight: 400;
+        @media screen and (max-width: 991px) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.icon-wrapper {
+    text-align: center;
+    p {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-family: stevie-sans,sans-serif;
+    }
+}
+
+#flagstories-research-image {
+    max-width: 120vh;
+    @media screen and (max-width: 991px) {
+        max-width: 90vh;
+    }
+}
+
+#google-fullgrid-1,
+#google-fullgrid-2 {
+    max-width: unset !important;
+    width: 120%;
+    @media screen and (max-width: 991px) {
+        width: 100%;
+    }
+}

@@ -1,0 +1,14 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: $black;
+    z-index: 999;
+    justify-content: center;
+    gap: 3rem;
+    font-family: 'NeueMontreal-Regular';
+    text-transform: uppercase;
+    padding: 1rem 0;
+    a {
+        color: $white;
+    }
+}
