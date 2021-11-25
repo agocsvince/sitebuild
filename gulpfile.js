@@ -82,6 +82,8 @@ gulp.task('icons', function() {
 gulp.task('watch', function() {
     gulp.watch('./src/assets/scss/**/*.scss', gulp.series('styles'));
     console.log('gulp is watching for SCSS changes 👀');
+    gulp.watch('./src/assets/img/**/*.png', gulp.series('imagemin'));
+    console.log('PNG 👀');
     gulp.watch('./src/**/*.html', gulp.series('copyHTML'));
     console.log('gulp is watching for changes in HTML files ⌨️');
     gulp.watch('./src/assets/js/**/*.js', gulp.series('scripts'));

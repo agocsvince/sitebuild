@@ -1,11 +1,12 @@
 //variables
 $black: #000;
 $white: #fff;
-$orange: #f4c560;
-$green: #b9d461;
-$green1: #50a485;
-$green2: #2b694b;
-$green-dark: #172d22;
+$orange: #F58500;
+$light-orange: #FFCC8F;
+$grey: #F9FBFC;
+$dark-grey: #c4c4c4;
+$blue: #2F80ED;
+$gradien: linear-gradient(236.77deg,$light-orange 19.79%,$orange 80.21%);
 $font-size: 14px;
 $font-size-mobile: 12px;
 $mobile: 767px;
@@ -27,7 +28,6 @@ $desktop-large: 2200px;
 @import 'components/header';
 @import 'components/menu';
 @import 'components/footer';
-@import 'pages/home';
 //style
 //tags
 * {
@@ -42,23 +42,24 @@ $desktop-large: 2200px;
 }
 
 ::-moz-selection {
-    background: $green;
+    background: $orange;
     color: $black;
 }
 
 ::selection {
-    background: $green;
+    background: $orange;
     color: $black;
 }
 
 html {
     scroll-behavior: smooth;
-    background: $white;
+    background: $orange;
 }
 
 body {
+    margin: 0;
     background-color: $white;
-    font-family: 'NeueMontreal-Bold';
+    font-family: 'Poppins-Medium';
     font-size: $font-size;
     color: $black;
     line-height: 1.5;
@@ -77,9 +78,9 @@ body {
 a {
     color: inherit;
     text-decoration: none;
-    font-family: 'NeueMontreal-Regular';
-    text-transform: uppercase;
+    font-family: 'Poppins-Medium';
     letter-spacing: 1px;
+    font-size: 13px;
 }
 
 img {
@@ -114,6 +115,12 @@ h1 {
     margin-top: .8rem;
 }
 
+h2 {
+    font-family: 'Barlow-Medium';
+    font-size: 38px;
+    line-height: 40px;
+}
+
 .h3-bigger {
     margin-bottom: 10px;
     font-size: 27px;
@@ -121,16 +128,20 @@ h1 {
     font-weight: 900;
 }
 
+h4 {
+    font-family: 'Poppins-Light';
+    font-size: 14px;
+}
+
 li,
 p {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 25px;
     font-weight: 400;
 }
 
 p {
-    margin-bottom: 16px;
-    font-family: 'NeueMontreal-Regular';
+    font-family: 'Poppins-Light';
 }
 
 small {
@@ -139,6 +150,7 @@ small {
 
 strong {
     font-weight: 700;
+    color: $orange;
 }
 
 marquee {
@@ -174,6 +186,14 @@ marquee {
 
 .p-6 {
     padding: 6rem;
+}
+
+.p-7 {
+    padding: 7rem;
+}
+
+.p-8 {
+    padding: 8rem;
 }
 
 .pb-0 {
@@ -265,7 +285,7 @@ marquee {
 }
 
 .py-4 {
-    padding: 4rem 0;
+    padding: 4rem 0 !important;
 }
 
 .py-5 {
@@ -276,8 +296,20 @@ marquee {
     padding: 6rem 0;
 }
 
+.py-7 {
+    padding: 7rem 0;
+}
+
+.py-8 {
+    padding: 8rem 0;
+}
+
 .px-1 {
     padding: 0 1rem;
+}
+
+.px-8 {
+    padding: 0 8rem;
 }
 
 .m-0 {
@@ -312,6 +344,10 @@ marquee {
     margin-bottom: 0 !important;
 }
 
+.mb-05 {
+    margin-bottom: .5rem !important;
+}
+
 .mb-1 {
     margin-bottom: 1rem !important;
 }
@@ -334,6 +370,14 @@ marquee {
 
 .mb-6 {
     margin-bottom: 6rem !important;
+}
+
+.mb-7 {
+    margin-bottom: 7rem !important;
+}
+
+.mb-8 {
+    margin-bottom: 8rem !important;
 }
 
 .mt-0 {
@@ -396,6 +440,14 @@ marquee {
     margin: 6rem 0;
 }
 
+.my-7 {
+    margin: 7rem 0;
+}
+
+.my-8 {
+    margin: 8rem 0;
+}
+
 .mx-1 {
     margin: 0 1rem;
 }
@@ -414,9 +466,23 @@ marquee {
 .mx-6 {
     margin: 0 6rem;
 }
-
+.mx-7 {
+    margin: 0 7rem;
+}
+.mx-8 {
+    margin: 0 8rem;
+}
+.mx-9 {
+    margin: 0 9rem;
+}
+.mx-10 {
+    margin: 0 10rem;
+}
 .ml-0 {
     margin-left: 0 !important;
+}
+.ml-05 {
+    margin-left: .5rem !important;
 }
 
 .ml-1 {
@@ -520,10 +586,7 @@ marquee {
 
 .w-50,
 .w-60,
-.w-70,
-.w-80,
-.w-90,
-.w-100 {
+.w-70 {
     margin: 0 auto;
 }
 
@@ -573,7 +636,7 @@ marquee {
 
 .bg--white {
     background-color: $white;
-    color: $green;
+    color: $grey;
 }
 
 .bg--black {
@@ -582,7 +645,7 @@ marquee {
 }
 
 .bg--green {
-    background-color: $green;
+    background-color: $grey;
     color: $white;
 }
 
@@ -619,345 +682,312 @@ marquee {
 #hero {
     background-color: $black;
     padding-top: 40px;
-
-    .swiper-pagination {
-        position: relative;
-        margin-top: 40px;
-    }
-
-    .slider-img {
-        background-size: cover !important;
-        background-position: center !important;
-        padding-bottom: 56.25% !important;
-        background-repeat: no-repeat !important;
-    }
-
-    #keresztanyu-slider {
-        background: url('../img/KERESZTANYU.png');
-    }
-    
-    #luxus-slider {
-        background: url('../img/SZULETETT\ FELESEGEK.jpg');
-    }
-
-    #stilusparbaj-slider {
-        background: url('../img/STILUSPARBAJ.jpg');
-    }
-
-    #hotel-margaret-slider {
-        background: url('../img/HOTEL_MARGARET.jpg');
-    }
 }
 
-.description {
-    color: $white;
-    width: 90%;
-    h1 {
-        width: 60%;
-        margin-bottom: 4rem;
-    }
-
-    p {
-        font-size: 20px;
-        line-height: 30px;
-    }
-}
-
-.swiper-pagination-bullet {
-    background: rgb(240, 240, 240) !important;
-    opacity: .6;
-    &.swiper-pagination-bullet-active {
-        background: $white !important;
-        opacity: 1;
-    }
-}
 main {
-    margin-top: 130px;
-}
+    margin-top: 76px;
+    #house {
+        background-color: $grey;
+        .text {
+            .contact {
+                .btn {
+                    transform: skew(20deg,0deg);
+                    display: inline-block;
+                    border-radius: 4px;
+                    padding: 10px 29px;
+                    background: $orange;
+                }
 
-#productions-list {
-    text-align: center;
-    h1 {
-        color: $black !important;
-    }
-    
-    .list {
-        justify-content: center;
-        text-transform: uppercase;
-        gap: 1rem;
-        margin: 0 auto;
-
-        p {
-            font-size: 15px;
+                .btn-text {
+                    transform: skew(-20deg, 0deg);
+                    color: $white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 15px;
+                }
+            }
+        }
+        .image {
+            background-image: url('../img/veresegyhaz-19.jpeg');
+            background-position: center;
+            background-size: cover;
         }
     }
-}
+    #work {
+        .image {
+            background-image: url('../img/veresegyhaz-20.jpeg');
+            background-position: center;
+            background-size: cover;
+        }
+    }
 
+    #key-ready {
+        .image {
+            background-image: url('../img/veresegyhaz-16.jpeg');
+            background-position: center;
+            background-size: cover;
+        }
+    }
 
-#productions .production {
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 56.25%;
-    background-repeat: no-repeat;
-    position: relative;
+    #general {
+        .image {
+            background-image: url('../img/veresegyhaz-5.jpeg');
+            background-position: center;
+            background-size: cover;
+        }
+    }
 
-    h2 {
-        color: $white;
-        font-family: 'NeueMontreal-Bold';
-        text-transform: uppercase;
-        font-size: 20px;
+    #build {
+        background-color: $grey;
+        .image {
+            background-image: url('../img/veresegyhaz-14.jpeg');
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    #build-2 {
+        background-color: $grey;
+    }
+
+    #build-3 {
+        background-color: $grey;
+        .image {
+            background-image: url('../img/veresegyhaz-17.jpeg');
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    #planning {
         text-align: center;
-        grid-area: h2;
-        position: absolute;
-        bottom: 2rem;
-        letter-spacing: .8px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    &#keresztanyu {
-        background: url('../img/KERESZTANYU.png');
-        background-size: cover;
-        background-position: center;
-        padding-bottom: 56.25%;
-        transition: filter .5s ease-in-out;
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-    }
-
-    &#keresztanyu:hover {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-    
-    &#luxus {
-        background: url('../img/SZULETETT\ FELESEGEK.jpg');
-        height: 40vh;
-        background-size: cover;
-        background-position: center;
-        padding-bottom: 56.25%;
-        transition: filter .5s ease-in-out;
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-        h1 {
-            line-height: 3.5rem;
-        }
-    }
-
-    &#luxus:hover {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-    
-    &#stilusparbaj {
-        background: url('../img/STILUSPARBAJ.jpg');
-        background-size: cover;
-        background-position: center;
-        padding-bottom: 56.25%;
-        transition: filter .5s ease-in-out;
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-    }
-
-    &#stilusparbaj:hover {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    } 
-    
-    &#hotel_margaret {
-        background: url('../img/HOTEL_MARGARET.jpg');
-        background-size: cover;
-        background-position: center;
-        padding-bottom: 56.25%;
-        transition: filter .5s ease-in-out;
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-    }
-
-    &#hotel_margaret:hover {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-}
-
-#producer {
-    background: $black;
-    #producer-img {
-        background: url('../img/Hamori\ Barbara.jpg');
-        background-position: center !important;
-        padding-bottom: 70.25% !important;
-        background-repeat: no-repeat !important;
-    }
-
-    .signature {
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-
-        img {
-            max-width: 160px;
-
-        }
-    }
-    
-}
-
-#team {
-    hr {
-        border-top: 2px solid $black;
-    }
-
-    .team-member {
-        .member-img {
-            background: url('../img/Rectangle\ 19.png');
-            height: 60vh;
-
-            &#dozsa-eniko {
-                background: url('../img/Dozsa\ Eniko.jpg');
-            }
-
-            &#horvath-antal {
-                background: url('../img/Horvath\ Antal.jpg');
-            }
-
-            &#toth-csaba {
-                background: url('../img/Toth\ Csaba.jpg');
-            }
-
-            &#balazs-andor {
-                background: url('../img/Balazs\ Andor.jpg');
-            }
-
-            &#kocsis-rita {
-                background: url('../img/Kocsis\ Rita.jpg');
-            }
-
-            &#zsingor-daniel {
-                background: url('../img/Zsingor\ Daniel.jpg');
-            }
-
-            &#egyed-rita {
-                background: url('../img/Egyed\ Rita.jpg');
-            }
-
-            &#korossy-anett {
-                background: url('../img/Korossy\ Anett.jpg');
-            }
-
-            &#balazs-ivan {
-                background: url('../img/Balazs\ Ivan.jpg');
-            }
-
-            &#czak-szilvia {
-                background: url('../img/Czak\ Szilvia.jpg');
-            }
-
-            &#hangyal-judit {
-                background: url('../img/Hangyal\ Judit.jpg');
-            }
-
-            &#borsos-miklos {
-                background: url('../img/Borsos\ Miklos.jpg');
-            }
-
-            &#dancsecs-ildiko {
-                background: url('../img/Dancsecs\ Ildiko.jpg');
-            }
-
-            &#farago-zsofia {
-                background: url('../img/Farago\ Zsofia.jpg');
-            }
-
-            &#fazekas-csaba {
-                background: url('../img/Fazekas\ Csaba.jpg');
-            }
-
-            &#horvath-mark {
-                background: url('../img/Horcath\ Mark.jpg');
-            }
-        }
-
-        .member-name {
-            font-size: 16px;
-            text-transform: uppercase;
-        }
-
-        .member-title {
-            font-size: 15px;
-        }
-
-    }
-}
-
-#gag p {
-    margin-left: 2rem;
-    margin-right: 20%;
-}
-
-#info {
-    img {
-        height: auto;
-    }
-    
-    p {
-    margin-left: 22%;
-    }
-}
-
-#keresztanyu-project {
-    background: url('../img/KERESZTANYU.png');
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 56.25%;
-}
-
-#keresztanyu-infos {
-    h1 {
-        color: $black;
-        margin-right: 10%;
-    } 
-    #actors {
-        width: 40%;
-        #actors-title {
-            font-weight: 800;
-        }
-
+        background-color: $grey;
         p {
-            line-height: 1rem;
+            width: auto;
         }
     }
+
+    #planning-2 {
+        background-color: $grey;
+
+        .border {
+            margin-bottom: 1rem;
+        }
+
+        .border:hover {
+            position: relative;
+            background: $gradien;
+            padding: 2px;
+            border-radius: 8px;
+        }
+
+        .accordion-wrapper {
+            cursor: pointer;
+            background-color: #fff;
+            padding: 20px;
+            width: calc(100% - 40px);
+            border-radius: 6px;
+            box-shadow: 5px 10px 10px #0b223805;
+            box-sizing: content-box;
+
+            .accordion {
+                user-select: none;
+                font-size: 17px;
+                font-family: 'Poppins-Regular';
+                &.active {
+                    background: linear-gradient(236.77deg,$light-orange 19.79%,$orange 80.21%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                &.active::after {
+                    content: "\2796";
+                }
+            }
+
+            .accordion::after {
+                content: "\02795";
+                font-size: 13px;
+                color: #1b1b1b;
+                float: right;
+                margin-left: 5px;
+            }
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: all .2s ease-out;
+            user-select: none;
+        }
+        
+        element.style {
+            max-height: 75px;
+        }
+        .accordion-wrapper.active .panel {
+            margin-top: 1rem;
+        }
+
+            }
+
+    #about-us {
+        text-align: center;
+        p {
+            width: auto;
+        }
+    }
+
+    #contact {
+        background-color: $grey;
+        .data {
+            strong {
+                color: $black;
+                font-family: 'Poppins-Medium';
+            }
+        }
+    }
+
+    #forsale {
+        height: auto;
+        h1 {
+            color: $black;
+        }
+    }
+
+    #wip {
+        background-color: $grey;
+        img {
+            border-radius: 5px;
+        }
+
+        h3 {
+            font-size: 15px;
+            font-family: 'Poppins-Regular';
+        }
+    }
+
+    #wip-single {
+        background-color: $grey;
+        img {
+            border-radius: 5px;
+        }
+    }
+
+    section {
+        scroll-margin-top: 5rem;
+        p {
+            width: 90%;
+        }
+
+        .image {
+            border-radius: 5px;
+        }
+    }
+
+    #slider {
+        .swiper {
+            background-color: $grey;
+            
+            .swiper-button-next {
+                color: $orange;
+            }
     
-    p {
-        margin-right: 10%;
-        line-height: 1rem;
-        white-space: nowrap;
-    }
+            .swiper-button-prev {
+                color: $orange;
+            }
+    
+            .swiper-pagination-bullet {
+                background-color: $dark-grey;
+                opacity: .6;
+            }
+    
+            .swiper-pagination-bullet-active {
+                background-color: $orange;
+                opacity: 1;
+            }
 
-    #producer-name {
-        margin-bottom: 15px;
-    }
+            .swiper-slide {
+                div {
+                    border-radius: 5px;
+                    background-size: cover !important;
+                    background-position: center !important;
+                    padding-bottom: 56.25% !important;
+                    background-repeat: no-repeat !important;
+                }
+    
+                .pic-1 {
+                    background-image: url('../img/veresegyhaz-1.jpeg');
+                }
+    
+                .pic-2 {
+                    background-image: url('../img/veresegyhaz-2.jpeg');
+                }
+    
+                .pic-3 {
+                    background-image: url('../img/veresegyhaz-3.jpeg');
+                }
+    
+                .pic-4 {
+                    background-image: url('../img/veresegyhaz-4.jpeg');
+                }
+    
+                .pic-5 {
+                    background-image: url('../img/veresegyhaz-5.jpeg');
+                }
+    
+                .pic-6 {
+                    background-image: url('../img/veresegyhaz-6.jpeg');
+                }
+                
+                .pic-7 {
+                    background-image: url('../img/veresegyhaz-7.jpeg');
+                }
+    
+                .pic-8 {
+                    background-image: url('../img/veresegyhaz-8.jpeg');
+                }
+    
+                .pic-9 {
+                    background-image: url('../img/veresegyhaz-9.jpeg');
+                }
+            }
+        }
+    }  
 }
 
-#keresztanyu-video1 {
-    background: url('../img/1.jpg');
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 56.25%;
+.image-source-link {
+    color: #98C3D1;
 }
 
-#keresztanyu {
-    background: url('../img/KERESZTANYU.png');
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 56.25%;
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom .mfp-bg {
+    opacity: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
-.keresztanyu-subpage {
-    h1 {
-        color: $black;
-    }
+.mfp-with-zoom.mfp-ready .mfp-container {
+        opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+        opacity: 0.8;
 }
 
-a:hover {
-    text-decoration: underline;
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
 }

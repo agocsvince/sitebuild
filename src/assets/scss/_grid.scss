@@ -1,42 +1,27 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    &.swiper-slide {
-        grid-template-columns: 2fr 1.3fr;
+
+    &.props {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
-    &#footer {
-        margin-left: 2rem;
-        grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 2fr 1fr;
-        grid-template-areas: " . . . . . "
-        " . . . . social";
+    &.data {
+        gap: 4rem;
+    }
+
+    &.info {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    &.images {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 1rem;
-    } 
-
-    &#team {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    &.producer {
-        grid-template-columns: 1fr 2fr;
-    }
-
-    &#producer {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-#team {
-    .grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
 .flex {
     display: flex;
-}
-
-.flex-col {
-    flex-direction: column;
+    flex: 1 1 0px;
+    justify-content: space-between;
 }
