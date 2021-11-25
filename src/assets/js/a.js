@@ -1,7 +1,5 @@
 let pages = document.getElementsByClassName('pages')[0].childNodes;
 
-console.log(pages);
-
 function removeAllId() {
     pages.forEach(element => {
         if (element.nextSibling !== null) {
@@ -29,7 +27,6 @@ function checkStatus() {
 function addStatus(e) {
     removeAllId()
     e.srcElement.id = 'current-page';
-    console.log(e.srcElement);
     checkStatus()
 }
 

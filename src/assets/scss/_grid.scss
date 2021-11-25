@@ -18,10 +18,35 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 1rem;
     }
+
+    @media screen and (max-width: $mobile) {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        &.props {
+            grid-template-columns: 1fr;
+        }
+    
+        &.data {
+            gap: 4rem;
+        }
+    
+        &.info {
+            grid-template-columns: 2fr 1fr 1fr;
+        }
+    
+        &.images {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+    }
 }
 
 .flex {
     display: flex;
     flex: 1 1 0px;
     justify-content: space-between;
+    // @media screen and (max-width: $mobile) {
+    //     flex-direction: column;
+    // }
 }

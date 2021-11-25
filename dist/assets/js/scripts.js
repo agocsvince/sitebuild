@@ -1,7 +1,5 @@
 let pages = document.getElementsByClassName('pages')[0].childNodes;
 
-console.log(pages);
-
 function removeAllId() {
     pages.forEach(element => {
         if (element.nextSibling !== null) {
@@ -29,7 +27,6 @@ function checkStatus() {
 function addStatus(e) {
     removeAllId()
     e.srcElement.id = 'current-page';
-    console.log(e.srcElement);
     checkStatus()
 }
 
@@ -60,6 +57,29 @@ for (let i = 0; i < acc.length; i++) {
         panel.style.maxHeight = panel.scrollHeight + "px";
     }
     });
+}
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".pages");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    document.getElementsByTagName("header")[0].classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".pages")[0];
+
+navLink.childNodes.forEach(n => {
+    if (n.nodeName !== "#text")
+    {
+    n.addEventListener("click", closeMenu);
+}});
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
 }
 // Magnific Popup v1.1.0 by Dmitry Semenov
 // http://bit.ly/magnific-popup#build=inline+image+ajax+iframe+gallery+retina+imagezoom
