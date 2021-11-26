@@ -23,7 +23,8 @@
       .grid.data {
         gap: 4rem; }
       .grid.info {
-        grid-template-columns: 2fr 1fr 1fr; }
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr; }
       .grid.images {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 1rem; } }
@@ -95,6 +96,9 @@ footer {
     opacity: .3; }
   footer span {
     font-family: 'Poppins-Light'; }
+  @media screen and (max-width: 767px) {
+    footer {
+      text-align: center; } }
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -826,8 +830,25 @@ main {
   transform: translateY(-8px) rotate(-45deg); }
 
 @media screen and (max-width: 767px) {
+  section .ml-4 {
+    margin: 0 2rem !important; }
+  section .mx-1 {
+    margin: 4rem auto !important; }
+  section .mx-4 {
+    margin: 0 2rem !important; }
+  section .mx-6 {
+    margin: 0 2rem !important;
+    width: auto !important;
+    max-width: none !important; }
   section .image {
-    margin: 0 !important; }
+    margin: 0 2rem !important; }
+  section p {
+    width: 100% !important; }
+  section .w-90 {
+    width: auto !important;
+    max-width: none !important; }
+  section#build-3 .w-90 {
+    margin: 0 2rem !important; }
   header.active {
     box-shadow: none; }
   main {
@@ -849,4 +870,12 @@ main {
       left: 0; }
   .hamburger {
     display: block;
-    cursor: pointer; } }
+    cursor: pointer; }
+  #contact {
+    text-align: center; }
+    #contact.py-6 {
+      padding: 2rem !important; }
+  #about-us .my-8 {
+    margin: 2rem 0; }
+    #about-us .my-8.props div:last-child {
+      margin-top: 3rem; } }

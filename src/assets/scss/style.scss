@@ -1018,8 +1018,43 @@ main {
 }
 
 @media screen and (max-width: $mobile) {
-    section .image {
-        margin: 0 !important;
+    section {
+        .ml-4 {
+            margin: 0 2rem !important;
+        }
+
+        .mx-1 {
+            margin: 4rem auto !important;
+        }
+
+        .mx-4 {
+            margin: 0 2rem !important;
+        }
+
+        .mx-6 {
+            margin: 0 2rem !important;
+            width: auto !important;
+            max-width: none !important;
+        }
+
+        .image {
+            margin: 0 2rem !important;
+        }
+
+        p {
+            width: 100% !important;
+        }
+
+        .w-90 {
+            width: auto !important;
+            max-width: none !important;
+        }
+
+        &#build-3 {
+            .w-90 {
+                margin: 0 2rem !important;
+            }
+        }
     }
 
     header {
@@ -1027,6 +1062,8 @@ main {
             box-shadow: none;
         }
     }
+
+    
 
     main {
         margin-top: 75px;
@@ -1057,5 +1094,25 @@ main {
     .hamburger {
         display: block;
         cursor: pointer;
+    }
+
+    #contact {
+        text-align: center;
+
+        &.py-6 {
+            padding: 2rem !important;
+        }
+    }
+
+    #about-us {
+        .my-8 {
+            margin: 2rem 0;
+
+            &.props {
+                div:last-child {
+                    margin-top: 3rem;
+                }
+            }
+        }
     }
 }
