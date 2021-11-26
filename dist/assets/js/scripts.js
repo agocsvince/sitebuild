@@ -1,3 +1,4 @@
+
 let pages = document.getElementsByClassName('pages')[0].childNodes;
 
 function removeAllId() {
