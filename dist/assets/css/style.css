@@ -12,9 +12,12 @@
     gap: 1rem; }
   @media screen and (max-width: 767px) {
     .grid {
-      display: flex;
-      flex-direction: column;
-      flex-flow: column; }
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2rem; }
+      .grid#work {
+        grid-auto-flow: dense; }
       .grid.props {
         grid-template-columns: 1fr; }
       .grid.data {

@@ -60,7 +60,7 @@ for (let i = 0; i < acc.length; i++) {
 }
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".pages");
-
+console.log(hamburger)
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
