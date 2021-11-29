@@ -68,13 +68,13 @@ header {
   @media screen and (max-width: 767px) {
     header .logo img {
       max-width: 70%;
-      width: 70%; }
-    header .pages {
-      margin: auto; }
-      header .pages #current-page {
-        color: #F58500; }
-      header .pages a {
-        margin: 1rem; } }
+      width: 70%; } }
+  header .pages {
+    margin: auto; }
+    header .pages #current-page {
+      color: #F58500; }
+    header .pages a {
+      margin: 1rem; }
 
 .navbar {
   position: fixed;
