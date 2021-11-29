@@ -81,10 +81,10 @@
                 </div>
                 <div>
                     <h2>Navigáció</h2>
-                    <p>Referenciák</p>
-                    <p>Árak</p>
-                    <p>Kivitelezés</p>
-                    <p>Tervezés</p>
+                    <a href="referenciak.html"><p>Referenciák</p></a>
+                    <a href="index.html#prices"><p>Árak</p></a>
+                    <a href="index.html#work"><p>Kivitelezés</p></a>
+                    <a href="index.html#planning"><p>Tervezés</p></a>
                 </div>
                 <div>
                     <h2>Elérhetőségünk</h2>
@@ -97,52 +97,27 @@
             <div>
                 <span>© Copyright 2021 Platina 3000 Kft. Minden jog fenntartva.</span>
             </div>
-            <footer>
-                <div class="grid info mb-4">
-                    <div>
-                        <img src="./assets/img/logo_blue.png" alt="logo">
-                        <h2>Munkavégzés magas színvonalon</h2>
-                        <p>Családi házak és társasházak generálkivitelezése</p>
-                    </div>
-                    <div>
-                        <h2>Navigáció</h2>
-                        <a href="referenciak.html"><p>Referenciák</p></a>
-                        <a href="index.html#prices"></a><p>Árak</p>
-                        <a href="index.html#work"></a><p>Kivitelezés</p>
-                        <a href="index.html#planning"></a><p>Tervezés</p>
-                    </div>
-                    <div>
-                        <h2>Elérhetőségünk</h2>
-                        <p>2340 Kiskunlacháza, Bethlen G. u. 19.</p>
-                        <p>+36 70 940 9189</p>
-                        <p>robert@hazepitesek.hu</p>
-                    </div>
-                </div>
-                <hr class="mb-1">
-                <div>
-                    <span>© Copyright 2021 Platina 3000 Kft. Minden jog fenntartva.</span>
-                </div>
-            </footer>
-        </body>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-          var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1.5,
-            spaceBetween: 30,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-            autoplay: {
-              delay: 5000,
-              disableOnInteraction: false,
-            },
-          });
-        </script>
-    </html>
+        </footer>
+    </body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1.5,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+</html>
