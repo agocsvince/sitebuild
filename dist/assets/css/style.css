@@ -739,6 +739,8 @@ main {
     background-color: #F9FBFC; }
     main #wip-single img {
       border-radius: 5px; }
+  main #references img {
+    border-radius: 5px; }
   main section {
     scroll-margin-top: 5rem; }
     main section p {
