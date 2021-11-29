@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Házépítések</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <script src="./assets/js/scripts.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    </head>
+    <body>
+        <header class="flex">
+            <div class="logo">
+                <a href="index.html"><img src="./assets/img/logo.png" alt="logo"></a>
+            </div>
+            <div class="pages mr-2">
+                <a href="index.html">Főoldal</a>
+                <a href="index.html#work">Kivitelezés</a>
+                <a href="most_epul.html">Most épül</a>
+                <a href="index.html#prices">Árak</a>
+                <a href="referenciak.html" id="current-page">Referenciák</a>
+                <a href="index.html#planning">Tervezés</a>
+                <a href="elado.html">Eladó</a>
+                <a href="index.html#contact">Kapcsolat</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </header>
+        <main>
+            <section id="references" class="py-1">
+                <div class="text ml-4 mt-2">
+                    <h4 class="mb-05"><strong class="slash">\</strong> Referenciák</h4>
+                    <h2 class="mb-2" id="name" data-name="nagyszalonta">Nagyszalonta</h2>
+                </div>
+                <div class="images grid m-4">
+                    
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="grid info mb-4">
+                <div>
+                    <img src="./assets/img/logo_blue.png" alt="logo">
+                    <h2>Munkavégzés magas színvonalon</h2>
+                    <p>Családi házak és társasházak generálkivitelezése</p>
+                </div>
+                <div>
+                    <h2>Navigáció</h2>
+                    <a href="referenciak.html"><p>Referenciák</p></a>
+                    <a href="index.html#prices"><p>Árak</p></a>
+                    <a href="index.html#work"><p>Kivitelezés</p></a>
+                    <a href="index.html#planning"><p>Tervezés</p></a>
+                </div>
+                <div>
+                    <h2>Elérhetőségünk</h2>
+                    <p>2340 Kiskunlacháza, Bethlen G. u. 19.</p>
+                    <p>+36 70 940 9189</p>
+                    <p>robert@hazepitesek.hu</p>
+                </div>
+            </div>
+            <hr class="mb-1">
+            <div>
+                <span>© Copyright 2021 Platina 3000 Kft. Minden jog fenntartva.</span>
+            </div>
+        </footer>
+    </body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const imagesDiv = document.getElementsByClassName('images')[0];
+  
+  const fileName = document.getElementById('name').getAttribute('data-name');
+  
+  
+  const csomor = 44;
+  const budakalasz = 78;
+  const jahnFerenc = 40;
+  const kistarcsa = 14;
+  const kohegyi = 36;
+  const mogyorod = 43;
+  const nagykovacsi = 69;
+  const nagyszalonta = 7;
+  const obuda = 37;
+  const piliscsaba = 74;
+  const portyazo = 137;
+  const remetehegyi = 16;
+  const sasadi = 26;
+  const szentendre = 67;
+  
+  
+  let counter;
+  if (fileName === "csomor") {counter = csomor}
+  else if (fileName === "budakalasz") {counter = budakalasz}
+  else if (fileName === "jahn-ferenc") {counter = jahnFerenc}
+  else if (fileName === "kistarcsa") {counter = kistarcsa}
+  else if (fileName === "kohegyi") {counter = kohegyi}
+  else if (fileName === "mogyorod") {counter = mogyorod}
+  else if (fileName === "nagykovacsi") {counter = nagykovacsi}
+  else if (fileName === "nagyszalonta") {counter = nagyszalonta}
+  else if (fileName === "obuda") {counter = obuda}
+  else if (fileName === "piliscsaba") {counter = piliscsaba}
+  else if (fileName === "portyazo") {counter = portyazo}
+  else if (fileName === "remetehegyi") {counter = remetehegyi}
+  else if (fileName === "sasadi") {counter = sasadi}
+  else if (fileName === "szentendre") {counter = szentendre}
+  
+  for (let i = 1; i <= counter; i++) {
+      imagesDiv.insertAdjacentHTML('beforeend', '' + 
+      `<a class="image" href="./assets/img/${fileName}-${i}.jpg" title="${fileName}-${i}">` + 
+      `   <img src="./assets/img/${fileName}-${i}.jpg" alt="">` + 
+      `</a>`
+      )
+  }
+    </script>
+</html>

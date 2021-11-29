@@ -65,12 +65,16 @@ header {
   top: 0;
   padding: 1rem;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3); }
-  header .pages {
-    margin: auto; }
-    header .pages #current-page {
-      color: #F58500; }
-    header .pages a {
-      margin: 1rem; }
+  @media screen and (max-width: 767px) {
+    header .logo img {
+      max-width: 70%;
+      width: 70%; }
+    header .pages {
+      margin: auto; }
+      header .pages #current-page {
+        color: #F58500; }
+      header .pages a {
+        margin: 1rem; } }
 
 .navbar {
   position: fixed;
@@ -854,7 +858,7 @@ main {
   header.active {
     box-shadow: none; }
   main {
-    margin-top: 75px; }
+    margin-top: 64px; }
   .pages {
     position: fixed;
     left: -100%;
