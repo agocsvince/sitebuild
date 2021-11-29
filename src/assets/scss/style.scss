@@ -760,9 +760,11 @@ main {
     }
 
     #prices {
-        strong {
-            color: $black;
-        }
+        p {
+            strong {
+                color: $black;
+            }
+        }   
     }
 
     #planning {

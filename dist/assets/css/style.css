@@ -665,7 +665,7 @@ main {
       background-image: url("../img/veresegyhaz-17.jpeg");
       background-position: center;
       background-size: cover; }
-  main #prices strong {
+  main #prices p strong {
     color: #000; }
   main #planning {
     text-align: center;
