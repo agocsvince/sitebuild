@@ -1,25 +1,28 @@
-.header {
+header {
     background: $white;
     position: fixed;
     z-index: 999;
     width: 100%;
     top: 0;
-    .logo {
-        top: 2rem;
-        img {
-            width: 10%;
+    padding: 1rem;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    @media screen and (max-width: $mobile) {
+        .logo {
+            img {
+                max-width: 70%;
+                width: 70%;
+            }
+        }  
+    }
+    .pages {
+        margin: auto;
+        #current-page {
+            color: $orange;
+        }
+
+        a {
             margin: 1rem;
         }
     }
 
-    .contact {
-        margin: auto 1rem auto 0;
-        a {
-            background-color: $black;
-            border-radius: 84px;
-            color: $white;
-            margin-right: 2rem;
-            padding: .4rem 2rem;
-        }
-    }
 }

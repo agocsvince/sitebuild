@@ -28,7 +28,7 @@ gulp.task('styles', function() {
 
 gulp.task('imagemin', async function() {
     gulp.src('./src/assets/img/**/*')
-        .pipe(imagemin())
+        // .pipe(imagemin())
         .pipe(gulp.dest('./dist/assets/img'))
 });
 
@@ -82,6 +82,8 @@ gulp.task('icons', function() {
 gulp.task('watch', function() {
     gulp.watch('./src/assets/scss/**/*.scss', gulp.series('styles'));
     console.log('gulp is watching for SCSS changes 👀');
+    gulp.watch('./src/assets/img/**/*.png', gulp.series('imagemin'));
+    console.log('PNG 👀');
     gulp.watch('./src/**/*.html', gulp.series('copyHTML'));
     console.log('gulp is watching for changes in HTML files ⌨️');
     gulp.watch('./src/assets/js/**/*.js', gulp.series('scripts'));
@@ -99,7 +101,7 @@ gulp.task('watchWP', function() {
 });
 
 gulp.task('wordpress', gulp.series('copyWPimage', 'copyWPstyle', 'copyPHP', 'watchWP'));
-gulp.task('default', gulp.series('imagemin', 'icons', 'fonts', 'copyHTML', 'copyPHP', 'copyCSS', 'scripts', 'styles', 'watch'));
+gulp.task('default', gulp.series('imagemin','icons', 'fonts', 'copyHTML', 'copyPHP', 'copyCSS', 'scripts', 'styles', 'watch'));
 
 // Generate the icons. This task takes a few seconds to complete.
 // You should run it at least once to create the icons. Then,

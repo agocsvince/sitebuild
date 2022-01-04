@@ -1,37 +1,21 @@
 footer {
-    padding: 3rem 0 2rem 0;
-    input {
-        width: 100%;
-        border: 0;
-        border-bottom: 2px solid $green-dark;
-        background: transparent;
+    background-color: $blue;
+    color: $white;
+    h2 {
+        font-family: 'Poppins-Medium';
+        font-size: 17px;
+    }
+    padding: 4rem 8rem 1rem 8rem;
+
+    hr {
+        opacity: .3;
     }
 
-    #contact {
-        background-color: $black;
-        border-radius: 84px;
-        color: $white;
-        padding: .4rem 2rem;
-        height: 30px;
-        width: 153px;
+    span {
+        font-family: 'Poppins-Light';
+    }
+
+    @media screen and (max-width: $mobile) {
         text-align: center;
-    }
-
-    img {
-        width: 20%;
-    }
-
-    a:last-of-type {
-        white-space: nowrap;
-    }
-
-    .social {
-        justify-self: end;
-        margin-right: 3.5rem;
-        grid-area: social;
-        img {
-            height: 60%;
-            width: auto;
-        }
     }
 }
